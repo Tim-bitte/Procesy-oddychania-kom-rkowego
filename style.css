@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    /* Głęboka, biologiczna zieleń zamiast jaskrawego pomarańczu */
+    background: #1e3f20; 
+    font-family: 'Noto Sans', sans-serif;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+.header__container {
+    text-align: center;
+    padding: 15px;
+    /* Ciemniejszy, stonowany odcień zieleni dla nagłówka */
+    background: #142b16;
+}
+
+#panel {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    /* Jasna, miętowa biel ułatwiająca czytanie tekstu */
+    background: #e8f5e9;
+    /* Ciemny tekst na jasnych przyciskach dla kontrastu */
+    color: #142b16; 
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+    border-radius: 4px;
+}
+
+/* Efekt po najechaniu myszką (Hover) dla lepszej interakcji */
+button:hover {
+    background: #c8e6c9;
+}
+
+button:active {
+  /* Energetyczny, jaskrawy zielono-żółty błysk symbolizujący uwalnianie energii ATP */
+  background: linear-gradient(135deg, #aeea00, #00e676);
+  box-shadow: 0 0 25px #00e676;
+  color: #000;
+}
+
+
+.main__container {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.image__wrapper {
+    position: relative;
+}
+
+.image__wrapper img {
+    width: 600px;
+    height: 500px;
+    border-radius: 30px;
+}
+.ryc{
+    max-width: 600px;
+    height: 500px;
+    margin-left: 5%;
+    border-radius: 30px;
+}
+.info__box {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 300px;
+    background: rgba(0,0,0,0.8);
+    padding: 15px;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.4s ease;
+    pointer-events: none;
+}
+
+.info__box.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
